@@ -40,8 +40,7 @@ var count =0;
          <div class="cards sub style="z-index:997;"" >
               <h2>🎇 To Many More Beautiful Moments! 🎇</h2>
     <hr>
-    <p>Every moment with you is special, and I can't wait to make many more memories together. 💕</p>
-
+            <p>Every moment with you is special, and I can't wait to make many more memories together. 💕</p>
             <input type="button" value="back" class="backward">
         </div>
         
