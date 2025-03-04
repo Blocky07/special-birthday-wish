@@ -1,0 +1,146 @@
+*:root{
+    --bg: #D8E2DC;
+    --contCol: #F4ACB7;
+    --border: #9D8189;
+    --btnCol: #FFE5D9;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: var(--bg);
+}
+
+.container{
+    animation-name: pop;
+    animation-duration: 0.1s;
+    width: 100%;
+    height: 50vmin;
+    margin-top: 25vmin;
+    display: grid;
+}
+@keyframes pop {
+    from{
+    justify-content: center;
+    height: 40vmin;
+    width: 80%;
+}
+}
+
+hr{
+    border-color: black;
+}
+.auth{
+    transition: 0.5s ease;
+    background-color: var(--contCol);
+    width: 40%;
+    height: 15em;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    box-shadow: 0 0 10px;
+}
+.authBtn{
+    background-color: var(--btnCol);
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 10px;
+    height: 20%;
+    border: none;
+    padding: 10px;
+    box-shadow: 0 0 5px;
+}
+.cards{
+    padding: 10px;
+    z-index: 100;
+    background-color: var(--contCol);
+    width: 25%;
+    height: 25em;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    box-shadow: 0 0 20px;
+    position: absolute;
+}
+.backward{
+    position: absolute;
+    background-color: var(--btnCol);
+    border-radius: 10px;
+    height: 12%;
+    width: 20%;
+    bottom: 10%;
+    left: 10%;
+    border: none;
+    padding: 10px;
+    box-shadow: 0 0 5px;
+}
+.sub{
+    z-index: 1;
+}
+.cards-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center ;
+}
+p{
+    font-size: large;
+}
+.forward{
+    position: absolute;
+    background-color: var(--btnCol);
+    border-radius: 10px;
+    height: 12%;
+    width: 20%;
+    bottom: 10%;
+    right: 10%;
+    border: none;
+    padding: 10px;
+    box-shadow: 0 0 5px;
+
+}
+.hide{
+    display: none;
+}
+.translate{
+    animation-name: trans;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+}
+.antitrans{
+    animation-name: antitrans;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes antitrans {
+    to{
+
+        translate: 0% 0%;
+    }
+    
+    
+}
+@keyframes trans {
+    to{
+
+        translate: -105% 0%;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+.auth{
+    width: 80%;
+    margin-top: 30%;
+}
+.cards{
+    height: 20em;
+    width: 80%;
+    margin-top: 25%;
+}
+}
