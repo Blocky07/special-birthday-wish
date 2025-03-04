@@ -42,7 +42,6 @@ var count =0;
     <hr>
     <p>Every moment with you is special, and I can't wait to make many more memories together. 💕</p>
 
-            <input type="button" value="next" class="forward">
             <input type="button" value="back" class="backward">
         </div>
         
