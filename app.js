@@ -49,9 +49,8 @@ var count =0;
     // let cards = cont.querySelector(".cards")
     let cards = cont.querySelectorAll(".cards")
     cards.forEach((card,index)=>{
-        let backward = card.querySelector(".backward")
-        let forwardBtn = card.querySelector(".forward")
-        console.log(cards[index])
+        let backward = card?.querySelector(".backward")
+        let forwardBtn = card?.querySelector(".forward")
         if(index == 0){
             card.style.zIndex=1000;
             // backward.classList.add("hide")
