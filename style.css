@@ -34,7 +34,7 @@ hr{
     transition: 0.5s ease;
     background-color: var(--contCol);
     width: 40%;
-    height: 15em;
+    height: 13em;
     border: 1px solid var(--border);
     border-radius: 10px;
     align-self: center;
@@ -115,9 +115,14 @@ p{
     animation-name: antitrans;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+    
 }
 
-@keyframes antitrans {
+
+@keyframes antitrans{
+    from{
+        translate: -105% 0%;
+    }
     to{
 
         translate: 0% 0%;
@@ -125,7 +130,7 @@ p{
     
     
 }
-@keyframes trans {
+@keyframes trans{
     to{
 
         translate: -105% 0%;

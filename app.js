@@ -16,9 +16,13 @@ var count =0;
  })
  btnuser.addEventListener("click",function(){
     cont.innerHTML=`<div class="cards-div">
+        <audio id="birthdayAudio" style="display: none">
+        <source src="videoplayback.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
          <div class="cards">
-          <h1>HAPPY BIRTHDAY!!!!</h1><hr>
-            <p>Click the following button...<br> </p>
+          <h1>HAPPY BIRTHDAY!!</h1><hr>
+            <p>A little surprise awaits ahead...<br>(Make sure your device volume is up..)<br>Click the following button...</p>
             <input type="button" value="start" class="forward">
 
     </div>
@@ -37,20 +41,30 @@ var count =0;
             <input type="button" value="next" class="forward">
             <input type="button" value="back" class="backward">
         </div>
-         <div class="cards sub style="z-index:997;"" >
-              <h2>🎇 To Many More Beautiful Moments! 🎇</h2>
+         <div class="cards sub style="z-index:997;" >
+              <h2> To Many More Beautiful Moments! </h2>
     <hr>
             <p>Every moment with you is special, and I can't wait to make many more memories together. 💕</p>
             <input type="button" value="back" class="backward">
+    
         </div>
-        
+    
+    
     </div>`
 
-    // let cards = cont.querySelector(".cards")
     let cards = cont.querySelectorAll(".cards")
+    let aud = cont.querySelector("#birthdayAudio")
     cards.forEach((card,index)=>{
+        aud.volume = 0.3
+        aud.play()
+        aud.loop = true
+        // aud.addEventListener("ended",function(){
+        //     this.currntTime=0
+        //     aud.play()
+        // })
         let backward = card?.querySelector(".backward")
         let forwardBtn = card?.querySelector(".forward")
+        // console.log(cards[index])
         if(index == 0){
             card.style.zIndex=1000;
             // backward.classList.add("hide")
@@ -58,13 +72,22 @@ var count =0;
 
         // const prevCard = card?.previousElementSibling
         forwardBtn?.addEventListener("click",function(){
+
             card.classList.add("translate")
+            if(card.classList.contains("antitrans")){
+                card.classList.remove("antitrans")
+            }
 
         })
         count++
         backward?.addEventListener('click',function(){
-            if(cards[index-1])              {
-           cards[index-1].classList.remove("translate")
+            if(cards[index-1]) {
+                cards[index-1].classList.add("antitrans")
+           if(cards[index-1].classList.contains("translate")){
+            cards[index-1].classList.remove("translate")
+        }
+
+
             }
         })
     })
